@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Registration | Sanay Chatrapati Shasan Paksh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    let startingNumber = 1000006;
+
+    document.addEventListener("DOMContentLoaded", function () {
+        let savedNumber = localStorage.getItem("candidateNumber");
+
+        if (!savedNumber) {
+            savedNumber = startingNumber;
+        }
+
+        document.getElementById("applicationNumber").value = savedNumber;
+    });
+
+    document.querySelector("form").addEventListener("submit", function () {
+
+        let currentNumber = parseInt(
+            document.getElementById("applicationNumber").value
+        );
+
+        localStorage.setItem(
+            "candidateNumber",
+            currentNumber + 1
+        );
+
+        alert(
+            "Registration Submitted Successfully!\nApplication Number: " +
+            currentNumber
+        );
+    });
+</script>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-text">
+                <img src="logo.jpeg" alt="Party Logo" class="logo-small">
+            </div>
+
+            ```
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Party</a></li>
+                <li><a href="leadership.html">Leadership</a></li>
+                <li><a href="founders-message.html">Founder's Message</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="mission.html">Our Mission</a></li>
+                <li><a href="insights.html">Insights</a></li>
+                <li><a href="candidate-registration.html">Candidate Registration</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        ```
+
+    </header>
+
+    <section class="about-banner">
+        <h1>Candidate Registration</h1>
+        <p>Join Sanay Chatrapati Shasan Paksh and contribute to nation building</p>
+    </section>
+
+    <section class="form-section">
+
+        ```
+        <div class="form-box">
+
+            <h2>Registration Form</h2>
+
+            <form>
+
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your full name" required>
+
+                <label>Age</label>
+                <input type="number" placeholder="Enter your age" required>
+
+                <label>Gender</label>
+                <select required>
+                    <option value="">Select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+
+                <label>Mobile Number</label>
+                <input type="tel" placeholder="Enter mobile number" required>
+
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter email address">
+
+                <h3>Application Number</h3>
+                <input type="text" id="applicationNumber" readonly>
+
+                <label>Candidate Photograph</label>
+                <input type="file" accept="image/*" required>
+
+                <label>Aadhaar Card (Front Side)</label>
+                <input type="file" accept="image/*,.pdf" required>
+
+                <label>Aadhaar Card (Back Side)</label>
+                <input type="file" accept="image/*,.pdf" required>
+
+                <label>Live Face Verification Video</label>
+                <input type="file" accept="video/*" required>
+
+                <label>Constituency / Area</label>
+                <input type="text" placeholder="Enter your area" required>
+
+                <label>Educational Qualification</label>
+                <input type="text" placeholder="Enter your qualification">
+
+                <label>Party Membership Status</label>
+                <select>
+                    <option value="">Are you a member?</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+
+                <label>Political / Social Experience</label>
+                <textarea placeholder="Describe your experience"></textarea>
+
+                <label>Why do you want to contest elections?</label>
+                <textarea placeholder="Write your reason"></textarea>
+
+                <label>Declaration</label>
+                <textarea readonly>
+```
+
+I hereby declare that all the information provided above is true to the best of my knowledge. </textarea>
+
+                ```
+                <button type="submit">Submit Registration</button>
+
+            </form>
+
+        </div>
+        ```
+
+    </section>
+
+    <footer>
+
+        ```
+        <h3>Sanay Chatrapati Shasan Paksh</h3>
+
+        <p>
+            Inspired by the ideals of Chhatrapati Shivaji Maharaj and Rajmata Jijau.
+        </p>
+
+        <p>
+            © 2026 Sanay Chatrapati Shasan Paksh. All Rights Reserved.
+        </p>
+        ```
+
+    </footer>
+
+</body>
+
+</html>
